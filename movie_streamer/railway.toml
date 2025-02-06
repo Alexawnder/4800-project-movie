@@ -1,0 +1,16 @@
+# Tell Railway how to build your full-stack app
+
+[project]
+name = "4800-project-movie"
+
+# Backend (Django)
+[services.backend]
+env = "python"
+build = "pip install -r requirements.txt"
+start = "python manage.py migrate && gunicorn movie_streamer.wsgi:application --bind 0.0.0.0:$PORT"
+
+# Frontend (React)
+[services.frontend]
+env = "node"
+build = "cd frontend && npm install && npm run build"
+start = "cd frontend && npm run start"
