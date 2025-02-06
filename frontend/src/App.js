@@ -8,6 +8,7 @@ function App() {
               <h1>Group 10</h1>
 
               <h2>Group Members</h2>
+              
               <ul>
                   <li>Jeffrey Hoang</li>
                   <li>Evan Cheng</li>
